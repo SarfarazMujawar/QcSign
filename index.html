@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Signature</title>
+
+    <link href="main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2 class=" text-3xl font-extrabold text-3xl">Quick Signature App</h2>
+    </nav>
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+
+
+        <div class="main flex flex-col ml-20 pt-5">
+            <div class="top h-20">
+                <div class="block">
+                    <label for="colorpicker" class="baskervville-sc-regular font-medium">select text color</label>
+                    <input type="color" name="colorpicker" id="colorpicker" class="ml-3 mr-3 form-control-color input">
+                </div>
+                <div class="block">
+                   
+                    <label for="bgpicker" class="baskervville-sc-regular font-medium">select background color</label>
+                    <input type="color" name="bgpicker" id="bgpicker" class="ml-3 mr-3 form-control-color input">
+                    
+                    
+                </div>
+                
+                <div class="block">
+
+                    <label for="fontsize" class="baskervville-sc-regular font-medium">select font size</label>
+                    <select name="fontsize" id="font-size" class=" baskervville-sc-regularml text-sm">
+
+                        
+
+                        <option value="2">2px</option>
+                        <option value="3">3px</option>
+                        <option value="4">4px</option>
+                        <option value="5">5px</option>
+                        <option value="7">7px</option>
+                        <option value="10">10px</option>
+
+                    </select>
+
+                </div>
+            </div>
+            <div class="flex items-center p-4 mb-2 text-sm text-blue-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800" role="alert">
+                <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                </svg>
+                <span class="sr-only">Info</span>
+                <div>
+                  <span class="font-medium">Info alert!</span> Please select background color as white for better sign quality.
+                </div>
+              </div>
+            
+
+            <canvas id="mycanvas" class="w-full mt-0" width="900px" height="350px"></canvas>
+
+
+            <div class="bottom">
+                <!-- <button type="button" class="btn" id="clearButton">Clear</button> -->
+
+
+                <button type="button" id="clearButton"
+                    class=" mt-2 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Clear</button>
+
+                <button type="button" id="saveButton"
+                    class=" mt-2 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Save
+                    & download</button>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
